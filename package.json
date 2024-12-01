@@ -1,0 +1,35 @@
+{
+  "name": "wordpress-starter",
+  "version": "2.5.0",
+  "description": "Gulp starter utils",
+  "author": "yroy-slw",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yroy-slw/wp-docker"
+  },
+  "scripts": {
+    "start": "gulp default",
+    "deploy": "gulp ftp"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "^3.2.1",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.4",
+    "node-sass": "^9.0.0",
+    "nvm": "0.0.4",
+    "vinyl-ftp": "^0.6.0",
+    "webpack-sftp-client": "^1.2.1"
+  },
+  "devDependencies": {
+    "gulp-sftp": "^0.1.5",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

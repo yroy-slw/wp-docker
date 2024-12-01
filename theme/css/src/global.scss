@@ -1,0 +1,85 @@
+* {
+	box-sizing: border-box;
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//Break points
+$break-landscape-large: 1260px;
+$break-landscape: 1024px;
+$break-portrait: 768px;
+$break-small: 640px;
+$break-large: 800px;
+
+//Colors 
+$red: #ff2e17;
+$black: #020407;
+$grey: #65666b;
+$lightGrey: #d8d9da;
+$white: #fdfdfe;
+
+//Fonts sizes
+@mixin title($color) {
+	font-size: 2.6rem;
+	line-height: 4.6rem;
+	color: $color;
+}
+
+@mixin subTitle($color) {
+	font-size: 2.2rem;
+	line-height: 3.1rem;
+	color: $color;
+}
+
+@mixin text($color) {
+	font-size: 2.0rem;
+	line-height: 2.9rem;
+	color: $color;
+}
+
+//Sizes 
+$full: 100%;
+$spaceUnit: 0.1rem;
+
+:root {
+	font-size: 62.5%;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 2.6rem;
+	line-height: 4.6rem;
+	color: $black;
+}
+
+h2 {
+	@include title($black);
+}
+
+body, html {
+	background: $white;
+	width: $full;
+	// height: $full;
+	@include text($black);
+}
+
+body {
+	&.noscroll {
+		position: fixed;
+		overflow: hidden;
+	}
+}
+
+.box {
+	width: $full;
+	padding: 5px;
+	height: 100%;
+}
+
+@media screen and (max-width: $break-small) {}
