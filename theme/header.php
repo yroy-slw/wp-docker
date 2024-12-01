@@ -18,14 +18,15 @@
 </head>
 <body>
     
-<?php $current_language = pll_current_language();
+<?php 
+/* $current_language = pll_current_language();
 if($current_language == "fr") {
     echo 'Continuer';
 } else {
     echo 'Continue';
-} ?>
+} */ ?>
         
-<ul><?php pll_the_languages(); ?></ul>
+<ul><?php /* pll_the_languages(); */ ?></ul>
 <?php
     $menu = wp_nav_menu(array(
         'theme_location' => 'rdv',

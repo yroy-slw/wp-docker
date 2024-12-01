@@ -10,14 +10,14 @@ var gulp = require('gulp'),
     ftp = require( 'vinyl-ftp' ),
     sftp = require('gulp-sftp'),
     jshint = require('gulp-jshint'),
-    themePath = `wp_data/wp-content/themes/${process.env.THEME_NAME}/css/styles`,
+    themePath = `wp_data/wp-content/themes/${process.env.THEME_NAME}/css`,
     user = '',
     password = '', 
     host = '', 
     port = 21,
     localFilesGlob = [
       themePath + '/**/*',
-      themePath + '/css/global.css'
+      themePath + '/global.css'
     ],
     remoteFolder = '/srv/htdocs/wp-content/themes/';
 
@@ -33,8 +33,8 @@ function getFtpConnection() {
 }
 
 var sass_paths = [
-  themePath + '/css/src/reset.scss',
-  themePath + '/css/src/global.scss',
+  themePath + '/src/reset.scss',
+  themePath + '/src/global.scss',
 ]
 
 // Watch sass to css
@@ -51,7 +51,7 @@ gulp.task('sass', function () {
       .pipe(cleanCss({
         aggressiveMerging: false
       }))
-      .pipe(gulp.dest(themePath + '/css'));
+      .pipe(gulp.dest(themePath + '/'));
     });
 });
 

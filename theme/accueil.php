@@ -11,4 +11,5 @@ Template Name: Accueil
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
         <?php endif; ?>
     <?php endwhile;?>
+</article>
 <?php get_footer(); ?>
