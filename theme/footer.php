@@ -1,4 +1,5 @@
 <?php wp_footer(); ?>
+	<footer>My footer</footer>
 		<script>
 			jQuery(document).ready(function($) {
 

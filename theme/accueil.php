@@ -4,6 +4,11 @@ Template Name: Accueil
 */
 ?>
 <?php get_header(); ?>
+
+<h2>My h2 title</h2>
+<p>That's my p tag</p>
+
+<?php /* Home page
 <article <?php if (current_user_can('manage_options')) { ?><?php live_edit(''); ?><?php } ?>>
     <?php while( have_rows('liste_de_domaines') ) : the_row();
         $image = get_sub_field('image');
@@ -12,4 +17,5 @@ Template Name: Accueil
         <?php endif; ?>
     <?php endwhile;?>
 </article>
+*/ ?>
 <?php get_footer(); ?>

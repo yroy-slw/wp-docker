@@ -17,6 +17,8 @@
     <?php wp_head(); ?>
 </head>
 <body>
+
+<header>My header</header>
     
 <?php 
 /* $current_language = pll_current_language();

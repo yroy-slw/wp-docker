@@ -1,2 +1,11 @@
+/**
+ * File main.scss
+ * Description: Main styles
+ */
+
+@use "root.scss";
 @use "reset.scss";
+@use "typography.scss";
+@use "header.scss";
+@use "footer.scss";
 @use "global.scss";
