@@ -9,7 +9,7 @@ This project is a WordPress development environment powered by Docker. It enable
 - phpMyAdmin for database administration
 - Supports custom themes and plugins
 - Configurable via environment variables
-- Gulp for SASS & FTP Deploy
+- esbuild for SASS compilation & sourcemaps
 
 ## Prerequisites
 Ensure you have the following installed:
@@ -37,15 +37,11 @@ Ensure you have the following installed:
 
 5. Access the WordPress site in your browser at `http://localhost`.
 
-## Gulp
+## Build
 
 1. Start
 ```bash
-gulp default
-```
-2. Deploy
-```bash
-gulp ftp
+npm run watch
 ```
 
 ## Services
