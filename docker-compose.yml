@@ -1,7 +1,8 @@
 version: "3.3"
 services:
   db:
-    image: mysql:5.7
+    image: docker.io/mysql:5.7.33
+    platform: linux/amd64
     volumes:
       - db_data:/var/lib/mysql
     restart: always

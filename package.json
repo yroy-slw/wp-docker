@@ -1,35 +1,29 @@
 {
   "name": "wordpress-starter",
   "version": "2.5.0",
-  "description": "Gulp starter utils",
+  "description": "docker & esbuild starter",
   "author": "yroy-slw",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/yroy-slw/wp-docker"
   },
+  "type": "module",
   "scripts": {
-    "start": "gulp default",
-    "deploy": "gulp ftp"
+    "build": "ts-node --esm build.ts",
+    "watch": "ts-node --esm build.ts --watch"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-sass": "^3.2.1",
-    "gulp-watch": "^4.3.11",
     "jshint": "^2.9.4",
     "node-sass": "^9.0.0",
-    "nvm": "0.0.4",
-    "vinyl-ftp": "^0.6.0",
-    "webpack-sftp-client": "^1.2.1"
+    "nvm": "0.0.4"
   },
   "devDependencies": {
-    "gulp-sftp": "^0.1.5",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.24.2",
+    "esbuild-sass-plugin": "^3.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   }
 }

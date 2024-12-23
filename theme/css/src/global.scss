@@ -119,6 +119,11 @@ body, html {
 	@include text($black);
 }
 
+header {
+	background-color: var(--primary-color);
+	color: var(--text-invert);
+}
+
 body {
 	&.noscroll {
 		// position: fixed;
