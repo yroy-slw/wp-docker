@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../js/src/main.tsx"],
+  "sourcesContent": ["import { SCROLL_THRESHOLD } from './constants';\n\n/**\n * Adds or removes the \"header-visible\" class on the <body> element\n * based on the scroll position of the page.\n */\nwindow.addEventListener('scroll', () => {\n    const body = document.body;\n    const scrollTop = window.scrollY;\n\n    /**\n     * If the scroll position is greater than or equal to 200 pixels,\n     * add the \"is-scrolled\" class to the <body> element.\n     */\n    if (scrollTop >= SCROLL_THRESHOLD) {\n        body.classList.add('is-scrolled');\n    } else {\n        body.classList.remove('is-scrolled');\n    }\n});\n"],
+  "mappings": "AAMA,OAAO,iBAAiB,SAAU,IAAM,CACpC,IAAMA,EAAO,SAAS,KACJ,OAAO,SAMR,IACbA,EAAK,UAAU,IAAI,aAAa,EAEhCA,EAAK,UAAU,OAAO,aAAa,CAE3C,CAAC",
+  "names": ["body"]
+}

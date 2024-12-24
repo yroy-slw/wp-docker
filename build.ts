@@ -7,14 +7,17 @@ import path from 'path';
 dotenv.config();
 
 /**
- * The path to the theme's CSS directory.
+ * The path to the theme's directory.
  */
-const themePath: string = path.join('wp_data', 'wp-content', 'themes', process.env.THEME_NAME || '', 'css');
+const themePath: string = path.join('wp_data', 'wp-content', 'themes', process.env.THEME_NAME || '');
 
 /**
- * The main Sass file to be processed.
+ * Entry points for the project.
  */
-const mainSassFile: string = path.join(themePath, 'src', 'main.scss');
+const entryPoints: Record<string, string> = {
+    'css/style': path.join(themePath, 'css', 'src', 'main.scss'),
+    'js/main': path.join(themePath, 'js', 'src', 'main.tsx'),
+};
 
 /**
  * Builds the project using esbuild, optionally enabling watch mode.
@@ -25,12 +28,15 @@ const mainSassFile: string = path.join(themePath, 'src', 'main.scss');
 const build = async (watch: boolean = false): Promise<void> => {
     try {
         const context = await esbuild.context({
-            entryPoints: [mainSassFile],
-            outfile: path.join(themePath, 'dist', 'style.css'), // Output file
+            entryPoints,
+            outdir: path.join(themePath, 'dist'),
             plugins: [sassPlugin()],
             minify: true,
             sourcemap: true,
-            bundle: true, // Combine everything into one file
+            bundle: true,
+            loader: { '.tsx': 'tsx', '.ts': 'ts' },
+            splitting: false,
+            format: 'esm',
         });
 
         if (watch) {

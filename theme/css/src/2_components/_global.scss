@@ -68,6 +68,13 @@ body {
 		// position: fixed;
 		overflow: hidden;
 	}
+	&.is-scrolled {
+
+		.#{project.$ns}header {
+			position: fixed;
+			top: 0;
+		}
+	}
 }
 
 @media screen and (max-width: breakpoint.$break-small) {}

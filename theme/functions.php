@@ -5,6 +5,19 @@
 
 add_filter( 'acf/admin/prevent_escaped_html_notice', '__return_true' );
 
+function enqueue_theme_scripts() {
+    // Enqueue the compiled JavaScript file
+    wp_enqueue_script(
+        'main', // Handle name
+        get_template_directory_uri() . '/dist/js/main.js',
+        [], // Dependencies (if any)
+        '1.0', // Version number
+        true // Load in the footer
+    );
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
+
 $subRole = get_role( 'subscriber' ); 
 $subRole->add_cap( 'read_private_posts' );
 $subRole->add_cap( 'read_private_pages' );
