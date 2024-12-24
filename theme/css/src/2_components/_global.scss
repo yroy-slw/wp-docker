@@ -1,10 +1,12 @@
-/**
- * File global.scss
- * Description: Global styles
- */
+/* ======================================================================
+* File: global.scss
+* Description: Global styles
+* ====================================================================== */
 
-// Mixins
-@use "typography.scss" as typos;
+@use "../0_config/variables/project" as project;
+@use "../0_config/variables/components" as component;
+@use "../0_config/variables/breakpoints" as breakpoint;
+@use "../0_config/mixins/typos" as typos;
 
 * {
 	box-sizing: border-box;
@@ -19,22 +21,6 @@ font-family: 'Inria Serif', serif;
 font-family: 'Inter', sans-serif;
 */
 
-//Break points
-$break-max: 1500px;
-$break-nav: 1400px;
-$break-landscape-large: 1260px;
-$break-landscape: 1023px;
-$break-portrait: 768px;
-$break-small: 640px;
-$break-large: 800px;
-
-// Component tokens
-$siteHeaderSize: 158.7rem;
-$siteSize: 120rem;
-$maxBreak: 114rem;
-$mediumBreak: 66rem;
-$maxWidth: 190.0rem;
-
 //Animations
 @keyframes fadeInLeft {
 	from {
@@ -47,10 +33,6 @@ $maxWidth: 190.0rem;
 	}
 }
 
-//Sizes 
-$full: 100%;
-$spaceUnit: 0.1rem;
-
 ::-moz-selection {
     color: var(--white);
     background: var(--primary-color);
@@ -59,10 +41,6 @@ $spaceUnit: 0.1rem;
 ::selection {
     color: var(--white);
     background: var(--primary-color);
-}
-
-:root {
-	font-size: 62.5%;
 }
 
 a {
@@ -80,8 +58,8 @@ p {
 
 body, html {
 	background: var(--white);
-	width: $full;
-	height: $full;
+	width: component.$full;
+	height: component.$full;
 	@include typos.text(var(--text-color));
 }
 
@@ -92,4 +70,4 @@ body {
 	}
 }
 
-@media screen and (max-width: $break-small) {}
+@media screen and (max-width: breakpoint.$break-small) {}

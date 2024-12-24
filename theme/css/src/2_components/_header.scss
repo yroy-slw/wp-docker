@@ -1,0 +1,15 @@
+/* ======================================================================
+* File: header.scss
+* Description: Header styles
+* ====================================================================== */
+
+@use "../0_config/variables/project" as project;
+@use "../0_config/variables/components" as component;
+@use "../0_config/variables/breakpoints" as breakpoint;
+@use "../0_config/mixins/typos" as typos;
+
+.#{project.$ns}header {
+	background-color: var(--primary-color);
+	color: var(--text-invert);
+	max-width: component.$siteHeaderSize;
+}

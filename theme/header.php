@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<header>My header</header>
+<header class="cds-header">My header</header>
     
 <?php 
 /* $current_language = pll_current_language();

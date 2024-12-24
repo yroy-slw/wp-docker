@@ -1,8 +1,7 @@
 /* ======================================================================
-* File: main.scss
-* Description: Main stylesheet
+* File: project.scss
+* Description: Project variables
 * ====================================================================== */
 
-@use "root.scss";
-@forward "1_vendors";
-@forward "2_components";
+// Custom namespace
+$ns: 'cds-';

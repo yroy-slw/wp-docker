@@ -1,8 +1,6 @@
 /* ======================================================================
-* File: main.scss
-* Description: Main stylesheet
+* File: index.scss
+* Description: Third party libraries, load all external css files
 * ====================================================================== */
 
-@use "root.scss";
-@forward "1_vendors";
-@forward "2_components";
+@forward 'reset';

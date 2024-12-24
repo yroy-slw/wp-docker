@@ -1,8 +1,8 @@
 /* ======================================================================
-* File: main.scss
-* Description: Main stylesheet
+* File: index.scss
+* Description: Components styles
 * ====================================================================== */
 
-@use "root.scss";
-@forward "1_vendors";
-@forward "2_components";
+@forward 'header';
+@forward 'footer';
+@forward 'global';
