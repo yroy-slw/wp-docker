@@ -1,20 +1,21 @@
 import { SCROLL_THRESHOLD } from './constants';
+import { isScrollBeyondThreshold, toggleClass } from './utils';
 
 /**
- * Adds or removes the "header-visible" class on the <body> element
- * based on the scroll position of the page.
+ * Handles the scroll event and updates the <body> element's class
+ * based on the current scroll position.
  */
-window.addEventListener('scroll', () => {
-    const body = document.body;
+const handleScroll = (): void => {
     const scrollTop = window.scrollY;
+    const body = document.body;
+	const headerVisibleClass = 'is-scrolled';
 
-    /**
-     * If the scroll position is greater than or equal to 200 pixels,
-     * add the "is-scrolled" class to the <body> element.
-     */
-    if (scrollTop >= SCROLL_THRESHOLD) {
-        body.classList.add('is-scrolled');
-    } else {
-        body.classList.remove('is-scrolled');
-    }
-});
+    // Determine if the scroll position exceeds the threshold
+    const isBeyondThreshold = isScrollBeyondThreshold(scrollTop, SCROLL_THRESHOLD);
+
+    // Toggle the "header-visible" class on the <body> element
+    toggleClass(body, headerVisibleClass, isBeyondThreshold);
+};
+
+// Attach the scroll handler to the window
+window.addEventListener('scroll', handleScroll);
