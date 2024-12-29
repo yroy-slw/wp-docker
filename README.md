@@ -10,6 +10,7 @@ This project is a WordPress development environment powered by Docker. It enable
 - Supports custom themes and plugins
 - Configurable via environment variables
 - esbuild for SASS compilation & sourcemaps
+- TSX for Javascript
 
 ## Prerequisites
 Ensure you have the following installed:
@@ -64,13 +65,11 @@ Customize your setup by editing the `.env` file. Below are the key variables:
 
 | Variable           | Default Value   | Description                        |
 |--------------------|-----------------|------------------------------------|
-| `WORDPRESS_DB_HOST`| `db`            | Database host                     |
-| `WORDPRESS_DB_NAME`| `wordpress`     | Database name                     |
-| `WORDPRESS_DB_USER`| `root`          | Database username                 |
-| `WORDPRESS_DB_PASSWORD`| `password` | Database password                 |
-| `WORDPRESS_TABLE_PREFIX`| `wp_`      | Table prefix                      |
-| `WORDPRESS_PORT`   | `80`            | Port for WordPress site           |
-| `PHPMYADMIN_PORT`  | `8080`          | Port for phpMyAdmin               |
+| `DB_HOST`| `db`            | Database host                     |
+| `DB_NAME`| `wordpress`     | Database name                     |
+| `DB_USER`| `root`          | Database username                 |
+| `DB_PASSWORD`| `password` | Database password                 |
+| `DB_HOST`  | `8080`          | Port for phpMyAdmin               |
 
 ## Customization
 1. **Themes and Plugins**:
