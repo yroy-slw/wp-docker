@@ -54,8 +54,8 @@ npm run watch
 wp-docker/
 ├── docker-compose.yml      # Docker Compose configuration
 ├── .env                    # Environment variables
-├── wordpress/              # WordPress files and custom themes/plugins
-├── db-data/                # MySQL data (persistent)
+├── theme/              # WordPress custom theme
+├── build.ts/              # Esbuild config
 ├── logs/                   # Log files for debugging
 └── README.md               # Project documentation
 ```
