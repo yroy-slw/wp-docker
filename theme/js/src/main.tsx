@@ -19,3 +19,40 @@ const handleScroll = (): void => {
 
 // Attach the scroll handler to the window
 window.addEventListener('scroll', handleScroll);
+
+/**
+ * Toggles the navigation menu and manages button visibility.
+ */
+const toggleMenu = (): void => {
+    const navMenuClass = 'cds-nav--visible';
+    const navMenu = document.querySelector('.cds-nav'); // Navigation menu
+    const openButton = document.querySelector('.cds-header__button'); // Open button
+    const closeButton = document.querySelector('.cds-nav__button'); // Close button
+
+    if (navMenu instanceof HTMLElement && openButton instanceof HTMLElement && closeButton instanceof HTMLElement) {
+        const isMenuVisible = navMenu.classList.contains(navMenuClass);
+
+        // Toggle the nav menu visibility
+        toggleClass(navMenu, navMenuClass, !isMenuVisible);
+
+        // Toggle visibility of the buttons
+        toggleClass(openButton, 'is-hidden', !isMenuVisible); // Hide open button when menu is visible
+        toggleClass(closeButton, 'is-hidden', isMenuVisible); // Show close button when menu is visible
+    }
+};
+
+/**
+ * Initialize event listeners for the open and close buttons.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const openButton = document.querySelector('.cds-header__button');
+    const closeButton = document.querySelector('.cds-nav__button');
+
+    if (openButton) {
+        openButton.addEventListener('click', toggleMenu);
+    }
+
+    if (closeButton) {
+        closeButton.addEventListener('click', toggleMenu);
+    }
+});
