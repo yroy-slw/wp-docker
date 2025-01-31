@@ -1,0 +1,20 @@
+{
+  "blue": {
+    "value": "#1106ff",
+    "type": "color",
+    "description": "Blue"
+  },
+  "white": {
+    "value": "#ffffff",
+    "type": "color",
+    "description": "Default invert color"
+  },
+  "pink": {
+    "value": "#ff06ea",
+    "type": "color"
+  },
+  "black": {
+    "value": "#000000",
+    "type": "color"
+  }
+}

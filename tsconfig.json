@@ -1,13 +1,21 @@
 {
     "compilerOptions": {
-        "target": "ES6",
+        "target": "es2017",
         "module": "ESNext",
         "jsx": "react-jsx",
         "moduleResolution": "Node",
+        "emitDecoratorMetadata": true,
         "strict": true,
         "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
         "skipLibCheck": true,
-        "outDir": "./dist"
+        "skipDefaultLibCheck": true,
+        "outDir": "./dist",
+        "lib": [
+            "es2020",
+            "dom"
+        ],    
     },
     "include": ["**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules", "dist"]

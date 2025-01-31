@@ -1,0 +1,20 @@
+{
+  "primary": {
+    "value": "{blue}",
+    "type": "color",
+    "description": "Primary color"
+  },
+  "text-color-invert": {
+    "value": "{white}",
+    "type": "color",
+    "description": "Default invert color"
+  },
+  "secondary": {
+    "value": "{pink}",
+    "type": "color"
+  },
+  "text-color": {
+    "value": "{black}",
+    "type": "color"
+  }
+}
