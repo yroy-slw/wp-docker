@@ -1,0 +1,30 @@
+/* ======================================================================
+* File: forms.scss
+* Description: Forms styles
+* ====================================================================== */
+
+@use "../0_config/variables/project" as project;
+@use "../0_config/variables/components" as component;
+@use "../0_config/variables/breakpoints" as breakpoint;
+@use "../0_config/mixins/typos" as typos;
+@use "../0_config/variables/families" as family;
+@use "../0_config/variables/zindex" as zindex;
+
+.#{project.$ns}form {
+
+    input,
+    textarea {
+        -webkit-appearance: none;
+        border-radius: none;
+        border: 0;
+        border-radius: 0;
+    }
+
+    textarea {
+
+    }
+
+    input[type="submit"] {
+        cursor: pointer;
+    }
+}
