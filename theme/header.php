@@ -13,7 +13,12 @@
 </head>
 <body>
 
-<header class="cds-header">My header</header>
+<header class="cds-header">
+    My header
+    <button class="cds-header__button">
+        <!-- Toggle menu - add an icon -->
+    </button>
+</header>
     
 <?php 
 /* $current_language = pll_current_language();
@@ -24,12 +29,20 @@ if($current_language == "fr") {
 } */ ?>
         
 <ul><?php /* pll_the_languages(); */ ?></ul>
-<?php
-    $menu = wp_nav_menu(array(
-        'theme_location' => 'rdv',
-        'echo'           => false,
-        'menu_class'     => 'menu-right',
-    ));
-            
-    echo $menu;
-?>
+
+<nav class="cds-nav">
+    <div class="cds-nav__inner">
+        <?php
+            $menu = wp_nav_menu(array(
+                'theme_location' => 'main-fr',
+                'echo'           => false,
+                'menu_class'     => 'cds-nav__inner',
+            ));
+                    
+            echo $menu;
+        ?>
+        <button class="cds-nav__button">
+            <!-- Toggle menu - add an icon -->
+        </button>
+    </div>
+</nav>
