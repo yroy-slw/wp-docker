@@ -3,6 +3,11 @@
 * Description: Components styles
 * ====================================================================== */
 
+@forward 'accueil';
+@forward 'banner';
+@forward 'content';
 @forward 'header';
 @forward 'footer';
+@forward 'form';
 @forward 'global';
+@forward 'nav';
