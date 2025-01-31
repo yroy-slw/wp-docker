@@ -10,17 +10,19 @@
   },
   "type": "module",
   "scripts": {
-    "build": "ts-node --esm build.ts",
-    "watch": "ts-node --esm build.ts --watch"
+    "build": "npm run build:tokens && ts-node --esm build.ts",
+    "watch": "npm run build:tokens && ts-node --esm build.ts --watch",
+    "build:tokens": "npm run build:tokens --prefix cds-tokens"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "dotenv": "^16.4.5",
+    "esbuild": "^0.24.2",
+    "esbuild-sass-plugin": "^3.3.1",
     "jshint": "^2.9.4",
     "node-sass": "^9.0.0",
     "nvm": "0.0.4",
-    "@types/node": "^22.10.2",
-    "esbuild": "^0.24.2",
-    "esbuild-sass-plugin": "^3.3.1",
+    "style-dictionary": "^4.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   }
