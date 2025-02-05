@@ -10,9 +10,11 @@
     },
     "type": "module",
     "scripts": {
-        "build:tokens": "style-dictionary build build-tokens.mjs"
+        "prebuild:tokens": "rimraf build",
+        "build:tokens": "style-dictionary build && cp build/css/_variables.css ../theme/css/src/3_tokens/ && cp build/scss/_variables.scss ../theme/css/src/3_tokens/"
     },
     "devDependencies": {
+        "rimraf": "^6.0.1",
         "style-dictionary": "~3.9.0"
     }
 }

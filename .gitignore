@@ -1,2 +1,5 @@
 node_modules
 wp_data
+.DS_Store
+Thumbs.db
+cds-tokens/build/

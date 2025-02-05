@@ -1,0 +1,14 @@
+{
+  "s": {
+    "value": "0.625rem",
+    "type": "dimension"
+  },
+  "m": {
+    "value": "1.25rem",
+    "type": "dimension"
+  },
+  "l": {
+    "value": "1.875rem",
+    "type": "dimension"
+  }
+}

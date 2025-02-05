@@ -9,7 +9,7 @@
 @use "../0_config/mixins/typos" as typos;
 
 .#{project.$ns}header {
-	background-color: var(--primary-color);
-	color: var(--text-invert);
+	background-color: var(--cds-primary);
+	color: var(--cds-text-color-invert);
 	max-width: component.$siteHeaderSize;
 }

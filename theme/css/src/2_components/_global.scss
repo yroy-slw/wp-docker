@@ -34,33 +34,33 @@ font-family: 'Inter', sans-serif;
 }
 
 ::-moz-selection {
-    color: var(--white);
-    background: var(--primary-color);
+    color: var(--cds-white);
+    background: var(--cds-primary);
 }
 
 ::selection {
-    color: var(--white);
-    background: var(--primary-color);
+    color: var(--cds-white);
+    background: var(--cds-primary);
 }
 
 a {
 	text-decoration: none;
-	color: var(--text-color);
+	color: var(--cds-text-color);
 }
 
 h2 {
-	@include typos.title(var(--text-color), left);
+	@include typos.title(var(--cds-text-color), left);
 }
 
 p {
-	@include typos.text(var(--text-color));
+	@include typos.text(var(--cds-text-color));
 }
 
 body, html {
-	background: var(--white);
+	background: var(--cds-white);
 	width: component.$full;
 	height: component.$full;
-	@include typos.text(var(--text-color));
+	@include typos.text(var(--cds-text-color));
 }
 
 body {

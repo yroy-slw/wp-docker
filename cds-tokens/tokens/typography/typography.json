@@ -1,0 +1,46 @@
+{
+  "fontFamilies": {
+    "lora": {
+      "value": "Lora",
+      "type": "text"
+    }
+  },
+  "fontWeights": {
+    "lora-0": {
+      "value": "Regular",
+      "type": "text"
+    }
+  },
+  "lineHeights": {
+    "0": {
+      "value": "1.75rem",
+      "type": "dimension"
+    },
+    "1": {
+      "value": "1.188rem",
+      "type": "dimension"
+    }
+  },
+  "fontSize": {
+    "0": {
+      "value": "1rem",
+      "type": "dimension"
+    },
+    "1": {
+      "value": "1.5rem",
+      "type": "dimension"
+    }
+  },
+  "paragraphSpacing": {
+    "0": {
+      "value": "0rem",
+      "type": "dimension"
+    }
+  },
+  "paragraphIndent": {
+    "0": {
+      "value": "0rem",
+      "type": "dimension"
+    }
+  }
+}
