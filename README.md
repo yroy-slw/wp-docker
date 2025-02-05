@@ -9,6 +9,7 @@ This project is a WordPress development environment powered by Docker. It enable
 - phpMyAdmin for database administration
 - Supports custom themes and plugins
 - Configurable via environment variables
+- Supports design tokens & tokens studio integration
 - esbuild for SASS compilation & sourcemaps
 - TSX for Javascript
 
@@ -52,10 +53,11 @@ npm run watch
 ## Directory Structure
 ```
 wp-docker/
+├── cds-theme/              # CDS wordpress theme
+├── cds-tokens/             # CDS design tokens
 ├── docker-compose.yml      # Docker Compose configuration
 ├── .env                    # Environment variables
-├── theme/              # WordPress custom theme
-├── build.ts/              # Esbuild config
+├── build.ts/               # Esbuild config
 ├── logs/                   # Log files for debugging
 └── README.md               # Project documentation
 ```
@@ -73,7 +75,7 @@ Customize your setup by editing the `.env` file. Below are the key variables:
 
 ## Customization
 1. **Themes and Plugins**:
-   Place custom themes in `wordpress/wp-content/themes` and plugins in `wordpress/wp-content/plugins`.
+   Place the cds-theme in `wordpress/wp-content/themes` and plugins in `wordpress/wp-content/plugins`.
 
 2. **Database**:
    Access phpMyAdmin at `http://localhost:8080` to manage the database.
