@@ -11,7 +11,7 @@
     "type": "module",
     "scripts": {
         "prebuild:tokens": "rimraf build",
-        "build:tokens": "style-dictionary build && cp build/css/_variables.css ../theme/css/src/3_tokens/ && cp build/scss/_variables.scss ../theme/css/src/3_tokens/"
+        "build:tokens": "style-dictionary build && cp build/css/_variables.css ../cds-theme/css/src/3_tokens/ && cp build/scss/_variables.scss ../cds-theme/css/src/3_tokens/"
     },
     "devDependencies": {
         "rimraf": "^6.0.1",
