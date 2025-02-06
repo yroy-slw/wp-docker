@@ -15,6 +15,7 @@
     "build:tokens": "npm run build:tokens --prefix cds-tokens"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.10.2",
     "dotenv": "^16.4.5",
     "esbuild": "^0.24.2",
@@ -25,5 +26,8 @@
     "style-dictionary": "^4.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0"
   }
 }

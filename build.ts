@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import esbuild from 'esbuild';
 import { sassPlugin } from 'esbuild-sass-plugin';
-import fs from 'fs';
+import fs from 'fs-extra';
 import path from 'path';
 
 // Load environment variables from .env file
@@ -12,7 +12,25 @@ dotenv.config();
  */
 const themePath: string = path.join('wp_data', 'wp-content', 'themes', process.env.THEME_NAME || '');
 
+/**
+ * The path to the token's directory.
+ */
 const tokensPath: string = path.join(process.env.THEME_NAME || '');
+
+/**
+ * Function to copy images after build.
+ */
+const copyImages = () => {
+    const srcImages = path.join(themePath, 'images');
+    const distImages = path.join(themePath, 'dist', 'assets');
+
+    if (fs.existsSync(srcImages)) {
+        fs.copySync(srcImages, distImages, { overwrite: true });
+        console.log('🖼️ Images copied to dist/assets/');
+    } else {
+        console.warn('⚠️ No images found in images/');
+    }
+};
 
 /**
  * Entry points for the project.
@@ -55,24 +73,44 @@ const build = async (watch: boolean = false): Promise<void> => {
         const context = await esbuild.context({
             entryPoints,
             outdir: path.join(themePath, 'dist'),
-            plugins: [sassPlugin()],
+            plugins: [
+                sassPlugin({
+                    transform: (source, resolveDir) => {
+                        // ✅ Prevent esbuild from resolving image paths
+                        return source.replace(/url\(["']?(.*?)["']?\)/g, 'url("$1")');
+                    },
+                }),
+            ],
             minify: true,
             sourcemap: true,
             bundle: true,
-            loader: { '.tsx': 'tsx', '.ts': 'ts' },
+            loader: {
+                '.tsx': 'tsx',
+                '.ts': 'ts',
+                '.png': 'file',
+                '.jpg': 'file',
+                '.svg': 'file',
+                '.woff': 'file',
+                '.woff2': 'file',
+                '.webp': 'file'
+            },
+            assetNames: 'assets/[name]',
             splitting: false,
             format: 'esm',
+            external: ['images/*'], // Allows esbuild to keep original image paths
         });
 
         if (watch) {
             console.log('👀 Watching for changes...');
             copyTokens();
+            copyImages();
             await context.watch();
         } else {
             console.log('✅ Build completed.');
             await context.rebuild();
             await context.dispose();
             copyTokens();
+            copyImages();
         }
     } catch (error) {
         console.error('❌ Build failed:', error);
