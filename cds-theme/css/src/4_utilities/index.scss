@@ -1,9 +1,6 @@
 /* ======================================================================
-* File: main.scss
-* Description: Main stylesheet
+* File: index.scss
+* Description: Utilities styles
 * ====================================================================== */
 
-@use "root.scss";
-@forward "1_vendors";
-@forward "2_components";
-@forward "4_utilities";
+@forward 'spacings';

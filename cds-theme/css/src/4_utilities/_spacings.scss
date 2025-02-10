@@ -1,0 +1,57 @@
+/* ======================================================================
+* File: spacings.scss
+* Description: Spacing styles
+* Available tokens:
+* .vds-p-s { padding: 2px; }
+* .vds-pt-m { padding-top: 4px; }
+* .vds-py-l { padding-top: 8px; padding-bottom: 8px; }
+* .vds-mt-x { margin-top: 8px; }
+* .vds-mb-xl { margin-bottom: 16px; }
+* ====================================================================== */
+
+@use "../3_tokens/variables.scss" as tokens;
+
+// Define spacing scale
+$spacing-scale: (
+    "s": tokens.$cds-s,
+    "m": tokens.$cds-m,
+    "l": tokens.$cds-l
+);
+
+// Mixin to generate utility classes
+@mixin generate-spacing-utilities($property, $prefix) {
+    @each $key, $value in $spacing-scale {
+        // Global (all sides)
+        .#{$prefix}-#{$key} {
+            #{$property}: $value;
+        }
+
+        // Individual sides
+        .#{$prefix}t-#{$key} {
+            #{$property}-top: $value;
+        }
+        .#{$prefix}b-#{$key} {
+            #{$property}-bottom: $value;
+        }
+        .#{$prefix}l-#{$key} {
+            #{$property}-left: $value;
+        }
+        .#{$prefix}r-#{$key} {
+            #{$property}-right: $value;
+        }
+
+        // Horizontal & Vertical (x and y)
+        .#{$prefix}x-#{$key} {
+            #{$property}-left: $value;
+            #{$property}-right: $value;
+        }
+        .#{$prefix}y-#{$key} {
+            #{$property}-top: $value;
+            #{$property}-bottom: $value;
+        }
+    }
+}
+
+// Generate padding and margin utilities
+@include generate-spacing-utilities("padding", "vds-p");
+@include generate-spacing-utilities("margin", "vds-m");
