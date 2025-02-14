@@ -2,11 +2,11 @@
 * File: spacings.scss
 * Description: Spacing styles
 * Available tokens:
-* .vds-p-s { padding: 2px; }
-* .vds-pt-m { padding-top: 4px; }
-* .vds-py-l { padding-top: 8px; padding-bottom: 8px; }
-* .vds-mt-x { margin-top: 8px; }
-* .vds-mb-xl { margin-bottom: 16px; }
+* .cds-p-s { padding: 2px; }
+* .cds-pt-m { padding-top: 4px; }
+* .cds-py-l { padding-top: 8px; padding-bottom: 8px; }
+* .cds-mt-x { margin-top: 8px; }
+* .cds-mb-xl { margin-bottom: 16px; }
 * ====================================================================== */
 
 @use "../3_tokens/variables.scss" as tokens;
@@ -53,5 +53,5 @@ $spacing-scale: (
 }
 
 // Generate padding and margin utilities
-@include generate-spacing-utilities("padding", "vds-p");
-@include generate-spacing-utilities("margin", "vds-m");
+@include generate-spacing-utilities("padding", "cds-p");
+@include generate-spacing-utilities("margin", "cds-m");
