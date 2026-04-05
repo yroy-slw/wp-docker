@@ -100,7 +100,7 @@
   "primitives-mode 1": {
     "Purple": {
       "purple-50": {
-        "value": "#DCA7FFFF",
+        "value": "#D089FFFF",
         "type": "color",
         "scope": [
           "ALL_SCOPES"
