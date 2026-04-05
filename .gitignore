@@ -3,3 +3,4 @@ wp_data
 .DS_Store
 Thumbs.db
 cds-tokens/build/
+cds-theme/vendor/

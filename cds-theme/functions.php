@@ -3,6 +3,12 @@
   'main-fr' => __( 'Main FR')
 ));
 
+// Load Composer dependencies.
+require_once __DIR__ . './vendor/autoload.php';
+
+// Initialize Timber.
+Timber\Timber::init();
+
 add_filter( 'acf/admin/prevent_escaped_html_notice', '__return_true' );
 
 function enqueue_theme_scripts() {
