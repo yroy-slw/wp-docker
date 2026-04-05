@@ -1,0 +1,321 @@
+{
+  "shop database-mode 1": {
+    "Stock": {
+      "value": "5",
+      "type": "float",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "Cart": {
+      "value": "1",
+      "type": "float",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "CartFotification": {
+      "value": true,
+      "type": "boolean",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "Price": {
+      "value": "250",
+      "type": "float",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "Rating": {
+      "value": "3",
+      "type": "float",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "Colour": {
+      "value": "Yellow",
+      "type": "string",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "Product Name": {
+      "value": "Yellow Nike Sunshine Trainers",
+      "type": "string",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "Image": {
+      "value": "Shoe 1",
+      "type": "string",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    }
+  },
+  "primitives-mode 1": {
+    "Purple": {
+      "purple-50": {
+        "value": "#DCA7FFFF",
+        "type": "color",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      },
+      "purple-300": {
+        "value": "#BE5CFFFF",
+        "type": "color",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      },
+      "purple-600": {
+        "value": "#A010FFFF",
+        "type": "color",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      }
+    },
+    "Greyscale": {
+      "white": {
+        "value": "#FFFFFFFF",
+        "type": "color",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      },
+      "grey": {
+        "value": "#C6C6C6FF",
+        "type": "color",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      },
+      "light-grey": {
+        "value": "#EBEBEBFF",
+        "type": "color",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      }
+    },
+    "Spacing": {
+      "xs": {
+        "value": "4px",
+        "type": "borderRadius",
+        "scope": [
+          "CORNER_RADIUS",
+          "GAP",
+          "STROKE_FLOAT",
+          "EFFECT_FLOAT",
+          "FONT_VARIATIONS"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      },
+      "s": {
+        "value": "8",
+        "type": "float",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      },
+      "m": {
+        "value": "12",
+        "type": "float",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      },
+      "l": {
+        "value": "16",
+        "type": "float",
+        "scope": [
+          "ALL_SCOPES"
+        ],
+        "$extensions": {
+          "tokens-studio": {
+            "mode": "mode 1"
+          }
+        }
+      }
+    }
+  },
+  "semantic-mode 1": {
+    "primary": {
+      "value": "{Purple.purple-600}",
+      "type": "color",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "label": {
+      "value": "{Greyscale.white}",
+      "type": "color",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "background-default": {
+      "value": "{Purple.purple-300}",
+      "type": "color",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "background-hover": {
+      "value": "{Purple.purple-600}",
+      "type": "color",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "background-disabled": {
+      "value": "{Greyscale.grey}",
+      "type": "color",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    },
+    "border": {
+      "value": "{Purple.purple-300}",
+      "type": "color",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    }
+  },
+  "button-mode 1": {
+    "radius": {
+      "value": "{Spacing.xs}",
+      "type": "borderRadius",
+      "scope": [
+        "ALL_SCOPES"
+      ],
+      "$extensions": {
+        "tokens-studio": {
+          "mode": "mode 1"
+        }
+      }
+    }
+  },
+  "global-global": {}
+}
